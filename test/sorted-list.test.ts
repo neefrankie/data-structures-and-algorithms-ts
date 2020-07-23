@@ -10,7 +10,7 @@ describe('Sorted list', () => {
       sortedList.insert(id);
     }
 
-    sortedList.displayList();
+    sortedList.displayList
 
     expect(sortedList.isEmpty()).toBeFalsy();
   });

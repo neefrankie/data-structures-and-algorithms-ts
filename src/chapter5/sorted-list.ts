@@ -52,10 +52,11 @@ export class SortedList {
   }
 
   displayList() {
-    console.log('List (first--> last): ');
+    console.log('List (first --> last): ');
 
     let current = this.first;
-    while (current != null) {
+
+    while (current) {
       current.displayLink();
       current = current.next;
     }

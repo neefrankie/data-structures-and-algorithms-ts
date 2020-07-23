@@ -1,6 +1,7 @@
 export class Link {
   readonly id: number;
   next: Link | null = null;
+  previous: Link | null = null;
 
   constructor(id: number) {
     this.id = id;
@@ -11,25 +12,24 @@ export class Link {
   }
 }
 
+// Display a link from first to last.
 export function displayLink(l: Link | null) {
   if (l == null) {
     return;
   }
 
-  console.log('Links in ascending order: ');
   l.displayLink();
 
   displayLink(l.next);
 }
 
+// Display a link from last to first.
 export function displayLinkReversed(l: Link | null) {
   if (l == null) {
     return;
   }
 
-  console.log('Links in descending order: ');
-
-  displayLink(l.next);
+  displayLinkReversed(l.next);
 
   l.displayLink();
 }
